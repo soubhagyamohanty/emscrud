@@ -2,6 +2,8 @@ package com.soubhagya.springboot.ems_backend.controller;
 
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.slf4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,10 +19,12 @@ import com.soubhagya.springboot.ems_backend.dto.EmployeeDto;
 import com.soubhagya.springboot.ems_backend.service.EmployeeService;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/employees")
+@Slf4j
 public class EmployeeController {
 
 	private EmployeeService employeeService;
